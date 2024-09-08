@@ -1,0 +1,60 @@
+*.venv
+.venv/
+env/
+venv/
+.env/
+restaurentenv/
+# Django
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.env
+*.venv
+.venv/
+env/
+venv/
+.env/
+
+# Django
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
