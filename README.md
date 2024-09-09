@@ -207,6 +207,47 @@ erDiagram
     DeliveryPerson ||--o{ Delivery : performs
 ```
 
+## Custom Permissions
+
+This project includes custom permission classes to manage access based on user roles. Below is an overview of each permission and its purpose:
+
+### 1. `IsOwnerOrEmployee`
+
+**Purpose:**  
+This permission ensures that only **restaurant owners** and **employees** can create or modify menu items, categories, and modifiers. Any authenticated user can view them.
+
+**Usage:**
+- **Owners/Employees**: Can create, modify, and delete menu items and categories.
+- **Customers/Other Users**: Can only view menu items and categories.
+
+
+### 2. `IsOwnerOrEmployeeOrCustomerReadOnly`
+
+**Purpose:**  
+This permission is designed to:
+- Allow **owners** and **employees** to view orders related to their restaurant.
+- Allow **customers** to view only their own orders.
+- Allow any authenticated user to create orders.
+
+**Usage:**
+- **Owners/Employees**: Can view and manage orders for their restaurant.
+- **Customers**: Can only view their own orders.
+- **Authenticated Users**: Can create new orders.
+
+
+
+### 3. `IsOwnerOrDeliveryPerson`
+
+**Purpose:**  
+This permission ensures that only **restaurant owners** can assign delivery persons to an order, and only **delivery persons** can view and update their assigned deliveries.
+
+**Usage:**
+- **Owners**: Can assign delivery personnel to orders for their restaurant.
+- **Delivery Personnel**: Can view and manage deliveries assigned to them.
+
+---
+
+These custom permissions provide role-based access control throughout the API, ensuring that users can only interact with data relevant to their role within the food delivery system.
 
 
 ## API Documentation
