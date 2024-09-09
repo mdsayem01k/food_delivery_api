@@ -24,6 +24,20 @@ This project is a simple backend API for a food delivery company, built using Dj
     </ul>
   </li>
 </ul>
+<h3>Customer</h3>
+<ul>
+  <li>Fields:
+    <ul>
+      <li>id (PK)</li>
+      <li>user</li>
+      <li>phone_number</li>
+      <li>gender </li>
+      <li>location </li>
+      <li>city</li>
+      <li>country</li>
+    </ul>
+  </li>
+</ul>
 <h3>Restaurant</h3>
 <ul>
   <li>Fields:
