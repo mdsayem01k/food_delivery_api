@@ -180,6 +180,9 @@ This project is a simple backend API for a food delivery company, built using Dj
   <li>The <code>Delivery</code> entity is separate from the <code>Order</code> entity to allow for future expansion (e.g., multiple deliveries per order, or delivery-only services).</li>
 </ol>
 
+</br>
+</br>
+<h3> API description and body are available on swagger docs</h3>
 
 
 
