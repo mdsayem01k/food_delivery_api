@@ -172,20 +172,29 @@ This project is a simple backend API for a food delivery company, built using Dj
     </ul>
   </li>
 </ul>
-<h2>Notes</h2>
-<ol>
-  <li>The <code>User</code> entity has a <code>role</code> field to distinguish between customers, restaurant owners, and delivery persons.</li>
-  <li>The <code>MenuItem</code> entity is linked to both <code>Restaurant</code> and <code>MenuCategory</code> for easier querying and data integrity.</li>
-  <li>The <code>Order</code> entity includes a <code>status</code> field to track the order's progress.</li>
-  <li>The <code>Delivery</code> entity is separate from the <code>Order</code> entity to allow for future expansion (e.g., multiple deliveries per order, or delivery-only services).</li>
-</ol>
-
-</br>
-</br>
-<h3> API description and body are available on swagger docs</h3>
+<h2>ER Diagram</h2>
 
 
+```mermaid
+erDiagram
+    CustomUser ||--o{ Restaurant : owns
+    CustomUser ||--o{ Order : places
+    Restaurant ||--o{ Category : has
+    Category ||--o{ MenuItem : contains
+    MenuItem ||--o{ Modifier : has
+    Order ||--|{ OrderItem : includes
+    OrderItem ||--|{ OrderItemModifier : has
+    Order }|--|| Restaurant : belongs_to
+    OrderItem }|--|| MenuItem : references
+    OrderItemModifier }|--|| Modifier : references
+    Customer ||--o{ Order : places
+    Order ||--o| Delivery : has
+    Restaurant ||--o{ Delivery : assigns
+    DeliveryPerson ||--o{ Delivery : performs
+```
 
 
 
+## API Documentation
+Api documentations are available on swagger
 
